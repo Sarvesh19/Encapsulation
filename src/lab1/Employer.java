@@ -10,31 +10,26 @@ package lab1;
  * @author mpatel6
  */
 public class Employer {
-    
+
     private Employee employee;
     private String cubeID;
 
-    public Employer(String firstName,String lastName,String ssn) {
-        employee =new Employee(firstName, lastName, ssn);
+    public Employer(String firstName, String lastName, String ssn) {
+        employee = new Employee(firstName, lastName, ssn);
     }
-
-
 
     public void setCubeID() {
         this.cubeID = "A10000";
     }
-    
-    
-    
-      
-    public void startProcess(){
+
+    public void startProcess() {
         employee.setCubeId(cubeID);
         employee.startProcess();
-        
+
     }
-    
-    public String getStatus(){
+
+    public String getStatus() {
         return employee.getStatus();
     }
-    
+
 }
