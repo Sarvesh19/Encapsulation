@@ -38,6 +38,12 @@ public class Employee {
         this.moveIntoCubicle(cubeId);        
         
     }
+
+    public void setCubeId(String cubeId) {
+        this.cubeId = cubeId;
+    }
+    
+    
     
     private String getDate(){
         SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
