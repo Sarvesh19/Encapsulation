@@ -12,16 +12,16 @@ import java.util.Date;
  * @version     1.01
  */
 public class Employee {
-    String firstName;
-    String lastName;
+    private String firstName;
+    private String lastName;
     public String ssn;
     public Date birthDate;
     boolean metWithHr;
     boolean metDeptStaff;
     boolean reviewedDeptPolicies;
     boolean movedIn;
-    String cubeId;
-    Date currentDate;
+    private String cubeId;
+    private Date currentDate;
 
     public Employee() {
         currentDate = new Date();

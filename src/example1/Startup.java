@@ -10,7 +10,7 @@ package example1;
  * helper methods that can be used by other primary methods. In this case, the
  * helper method should be declared private while the primary method may be
  * declared public. Finally, there should only be a few methods that are public,
- * with the vast majority of methods declared private. This simpifies the
+ * with the vast majority of methods declared private. This simplifies the
  * programming interface to the class.
  *
  * @author jlombardo
