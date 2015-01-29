@@ -38,21 +38,27 @@ public class Employee {
         this.moveIntoCubicle(cubeId);        
         
     }
+    
+    private String getDate(){
+        SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
+        String fmtDate = sdf.format(currentDate);
+        return fmtDate;
+    }
 
     // Assume this must be performed first
     private void meetWithHrForBenefitAndSalryInfo() {
-        SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
-        String fmtDate = sdf.format(currentDate);
-        System.out.println("Met with Hr on " + fmtDate);
+//        SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
+//        String fmtDate = sdf.format(currentDate);
+        System.out.println("Met with Hr on " + getDate());
         metWithHr = true;
     }
 
     // Assume this is must be performed second
     private void meetDepartmentStaff() {
         if(metWithHr) {
-            SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
-            String fmtDate = sdf.format(currentDate);
-            System.out.println("Met with Dept. Staff on " + fmtDate);
+//            SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
+//            String fmtDate = sdf.format(currentDate);
+            System.out.println("Met with Dept. Staff on " +  getDate());
             metDeptStaff = true;
         } else {
             System.out.println("Sorry, you cannot meet with "
@@ -63,9 +69,9 @@ public class Employee {
     // Assume this must be performed third
     private void reviewDeptPolicies() {
         if(metWithHr && metDeptStaff) {
-            SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
-            String fmtDate = sdf.format(currentDate);
-            System.out.println("Reviewed Dept. Policies on " + fmtDate);
+//            SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
+//            String fmtDate = sdf.format(currentDate);
+            System.out.println("Reviewed Dept. Policies on " + getDate());
             reviewedDeptPolicies = true;
         } else {
             System.out.println("Sorry, you cannot review "
@@ -77,9 +83,9 @@ public class Employee {
     // Assume this must be performed 4th
     private void moveIntoCubicle(String cubeId) {
         if(metWithHr && metDeptStaff && reviewedDeptPolicies) {
-            SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
-            String fmtDate = sdf.format(currentDate);
-            System.out.println("Moved into cube on " + fmtDate);
+//            SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
+//            String fmtDate = sdf.format(currentDate);
+            System.out.println("Moved into cube on " + getDate());
             this.cubeId = cubeId;
             this.movedIn = true;
         } else {
@@ -92,14 +98,14 @@ public class Employee {
     }
 
     public String getStatus() {
-        SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
-        String fmtDate = sdf.format(currentDate);
+//        SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
+//        String fmtDate = sdf.format(currentDate);
 
         if(metWithHr && metDeptStaff
            && reviewedDeptPolicies && movedIn) {
-            return "Orientation is completed on: " + fmtDate;
+            return "Orientation is completed on: " + getDate();
         } else {
-            return fmtDate + ": Orientation in progress...";
+            return getDate() + ": Orientation in progress...";
         }
     }
 }
