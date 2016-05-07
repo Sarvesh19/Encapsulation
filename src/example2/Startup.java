@@ -1,5 +1,5 @@
 package example2;
-
+import java.util.Scanner;
 /**
  * This example fixes the problems in example1 and follows good encapsulation.
  * Notice the properties are declared private and most methods are also private.
@@ -17,7 +17,9 @@ public class Startup {
     public static void main(String[] args) {
         
         Cake cake = new Cake();
-
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Eneter Quantity for bake :");
+        int quantity  = sc.nextInt();
         // Simple now -- only one method to understand. Other methods are
         // hidden away (encapsulated) by this method.
         cake.make(2);
