@@ -22,7 +22,7 @@ public class Startup {
         int quantity  = sc.nextInt();
         // Simple now -- only one method to understand. Other methods are
         // hidden away (encapsulated) by this method.
-        cake.make(2);
+        cake.make(quantity);
     }
 
 }
